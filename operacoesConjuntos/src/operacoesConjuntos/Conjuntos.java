@@ -12,6 +12,7 @@ public class Conjuntos {
 	private Map<String, String> uniao;
 	private Map<String, String> interseccao;
 	private Map<String, String> diferencaSimetrica;
+	private Map<String, String> diferenca;
 
 	public Conjuntos() {
 		this.alfabeto = new ArrayList<Character>();
@@ -20,6 +21,7 @@ public class Conjuntos {
 		this.uniao = new TreeMap<String, String>();
 		this.interseccao = new TreeMap<String, String>();
 		this.diferencaSimetrica = new TreeMap<String, String>();
+		this.diferenca = new TreeMap<String, String>();
 
 	}
 
@@ -65,6 +67,14 @@ public class Conjuntos {
 			}
 		}
 	}
+	
+	public void calcularDiferenca() {
+		for (String a : conjuntoA.keySet()) {
+			if (!conjuntoB.containsKey(a)) {
+				diferenca.put(a, a);
+			}
+		}
+	}
 
 	public Map<String, String> getConjuntoA() {
 		return conjuntoA;
@@ -84,6 +94,10 @@ public class Conjuntos {
 
 	public Map<String, String> getDiferencaSimetrica() {
 		return diferencaSimetrica;
+	}
+
+	public Map<String, String> getDiferenca() {
+		return diferenca;
 	}
 
 }
