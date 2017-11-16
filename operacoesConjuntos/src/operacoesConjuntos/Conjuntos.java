@@ -16,7 +16,7 @@ public class Conjuntos {
 		this.conjuntoB = new HashMap<String, String>();
 	}
 
-	public void criarConjuntoUniao() {
+	public void criarListAlfabeto() {
 		for (int i = 65; i <= 90; i++) {
 			alfabeto.add((char) i);
 		}
