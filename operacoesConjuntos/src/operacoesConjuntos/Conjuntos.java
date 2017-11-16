@@ -1,7 +1,7 @@
 package operacoesConjuntos;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.TreeMap;
 import java.util.List;
 import java.util.Map;
 
@@ -12,8 +12,8 @@ public class Conjuntos {
 
 	public Conjuntos() {
 		this.alfabeto = new ArrayList<Character>();
-		this.conjuntoA = new HashMap<String, String>();
-		this.conjuntoB = new HashMap<String, String>();
+		this.conjuntoA = new TreeMap<String, String>();
+		this.conjuntoB = new TreeMap<String, String>();
 	}
 
 	public void criarListAlfabeto() {
@@ -39,9 +39,19 @@ public class Conjuntos {
 	}
 	
 	public int calcularUniao() {
-		Map<String, String> uniao = conjuntoA;
+		Map<String, String> uniao = new TreeMap<String, String>();
+		uniao.putAll(conjuntoA);
 		uniao.putAll(conjuntoB);
 		return uniao.size();
+	}
+	public int calcularInterseccao() {
+		int cont = 0;
+		for(String a: conjuntoA.keySet()) {
+			if(conjuntoB.containsKey(a)) {
+				cont++;
+			}
+		}
+		return cont;
 	}
 	
 	public Map<String, String> getConjuntoA() {

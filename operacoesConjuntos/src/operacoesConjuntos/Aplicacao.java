@@ -17,10 +17,11 @@ public class Aplicacao {
 		conjuntos.criarConjunto(conjunto, 2);
 
 		JOptionPane.showMessageDialog(null,
-				"Conjunto A = " + conjuntos.getConjuntoA().values() + "\n" + 
-				"Conjunto B = "	+ conjuntos.getConjuntoB().values() + "\n \n" + 
+				"Conjunto A = " + conjuntos.getConjuntoA().keySet() + "\n" + 
+				"Conjunto B = "	+ conjuntos.getConjuntoB().keySet() + "\n \n" + 
 				"Quantidade de elementos de acordo com as operações:"+ "\n \n" + 
-				"A U B = " + conjuntos.calcularUniao(),
-				"Operações de conjuntos - Quantidade de elementos", JOptionPane.INFORMATION_MESSAGE);
+				"A U B = " + conjuntos.calcularUniao() + "\n" + 
+				"Intersecção = " + conjuntos.calcularInterseccao(),
+				"Operações de conjuntos - Quantidade de elementos", JOptionPane.INFORMATION_MESSAGE);	
 	}
 }
