@@ -9,11 +9,18 @@ public class Conjuntos {
 	private List<Character> alfabeto;
 	private Map<String, String> conjuntoA;
 	private Map<String, String> conjuntoB;
+	private Map<String, String> uniao;
+	private Map<String, String> interseccao;
+	private Map<String, String> diferencaSimetrica;
 
 	public Conjuntos() {
 		this.alfabeto = new ArrayList<Character>();
 		this.conjuntoA = new TreeMap<String, String>();
 		this.conjuntoB = new TreeMap<String, String>();
+		this.uniao = new TreeMap<String, String>();
+		this.interseccao = new TreeMap<String, String>();
+		this.diferencaSimetrica = new TreeMap<String, String>();
+
 	}
 
 	public void criarListAlfabeto() {
@@ -24,36 +31,41 @@ public class Conjuntos {
 			alfabeto.add((char) i);
 		}
 	}
-	
+
 	public void criarConjunto(String conjunto, int tipo) {
 		String[] elemento = conjunto.split(" ");
 		int tamanho = elemento.length;
-		
-		for(int i = 0; i < tamanho; i++) {
-			if(tipo == 1) {
+
+		for (int i = 0; i < tamanho; i++) {
+			if (tipo == 1) {
 				conjuntoA.put(elemento[i], elemento[i]);
-			}else {
+			} else {
 				conjuntoB.put(elemento[i], elemento[i]);
 			}
 		}
 	}
-	
-	public int calcularUniao() {
-		Map<String, String> uniao = new TreeMap<String, String>();
+
+	public void calcularUniao() {
 		uniao.putAll(conjuntoA);
 		uniao.putAll(conjuntoB);
-		return uniao.size();
 	}
-	public int calcularInterseccao() {
-		int cont = 0;
-		for(String a: conjuntoA.keySet()) {
-			if(conjuntoB.containsKey(a)) {
-				cont++;
+
+	public void calcularInterseccao() {
+		for (String a : conjuntoA.keySet()) {
+			if (conjuntoB.containsKey(a)) {
+				interseccao.put(a, a);
 			}
 		}
-		return cont;
 	}
-	
+
+	public void calcularDiferencaSimetrica() {
+		for (String a : uniao.keySet()) {
+			if (!interseccao.containsKey(a)) {
+				diferencaSimetrica.put(a, a);
+			}
+		}
+	}
+
 	public Map<String, String> getConjuntoA() {
 		return conjuntoA;
 	}
@@ -61,7 +73,17 @@ public class Conjuntos {
 	public Map<String, String> getConjuntoB() {
 		return conjuntoB;
 	}
-	
-	
+
+	public Map<String, String> getUniao() {
+		return uniao;
+	}
+
+	public Map<String, String> getInterseccao() {
+		return interseccao;
+	}
+
+	public Map<String, String> getDiferencaSimetrica() {
+		return diferencaSimetrica;
+	}
 
 }
