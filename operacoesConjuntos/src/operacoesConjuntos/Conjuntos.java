@@ -24,6 +24,7 @@ public class Conjuntos {
 			alfabeto.add((char) i);
 		}
 	}
+	
 	public void criarConjunto(String conjunto, int tipo) {
 		String[] elemento = conjunto.split(" ");
 		int tamanho = elemento.length;
@@ -35,6 +36,12 @@ public class Conjuntos {
 				conjuntoB.put(elemento[i], elemento[i]);
 			}
 		}
+	}
+	
+	public int calcularUniao() {
+		Map<String, String> uniao = conjuntoA;
+		uniao.putAll(conjuntoB);
+		return uniao.size();
 	}
 	
 	public Map<String, String> getConjuntoA() {
