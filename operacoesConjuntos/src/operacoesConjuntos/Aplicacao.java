@@ -20,13 +20,15 @@ public class Aplicacao {
 		conjuntos.calcularInterseccao();
 		conjuntos.calcularDiferencaSimetrica();
 		conjuntos.calcularDiferenca();
-		
+		conjuntos.calcularProdutoCartesiano();
+			
 		JOptionPane.showMessageDialog(null,
 				"Conjunto A = " + conjuntos.getConjuntoA().keySet() + "\n" + 
 				"Conjunto B = "	+ conjuntos.getConjuntoB().keySet() + "\n \n" + 
 				"Quantidade de elementos de acordo com as operações:" + "\n \n" + 
 				"União = " + conjuntos.getUniao().keySet() + "  Quant. elementos: " + conjuntos.getUniao().size() + "\n" + 
 				"Intersecção = " + conjuntos.getInterseccao().keySet() + "  Quant. elementos: " + conjuntos.getInterseccao().size() + "\n" + 
+				"Produto Cartesiano = " + conjuntos.getProdutoCartesiano().keySet() + "  Quant. elementos: " + conjuntos.getProdutoCartesiano().size()+ "\n" + 
 				"Diferença Simétrica = " + conjuntos.getDiferencaSimetrica().keySet() + "  Quant. elementos: " + conjuntos.getDiferencaSimetrica().size() + "\n" + 
 				"Diferença A - B = " + conjuntos.getDiferenca().keySet() + "  Quant. elementos: " + conjuntos.getDiferenca().size(),
 				"Operações de conjuntos - Quantidade de elementos", JOptionPane.INFORMATION_MESSAGE);	
