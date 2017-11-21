@@ -25,15 +25,15 @@ public class Aplicacao {
 		conjuntos.calcularComplementar();
 			
 		System.out.println(
-				"Conjunto A = " + conjuntos.getConjuntoA().keySet() + "\n" + 
-				"Conjunto B = "	+ conjuntos.getConjuntoB().keySet() + "\n \n" + 
+				"Conjunto A = " + conjuntos.getConjuntoA() + "\n" + 
+				"Conjunto B = "	+ conjuntos.getConjuntoB() + "\n \n" + 
 				"Quantidade de elementos de acordo com as operações:" + "\n \n" + 
-				"União = " + conjuntos.getUniao().keySet() + "  Quant. elementos: " + conjuntos.getUniao().size() + "\n" + 
-				"Intersecção = " + conjuntos.getInterseccao().keySet() + "  Quant. elementos: " + conjuntos.getInterseccao().size() + "\n" + 
-				"Produto Cartesiano = " + conjuntos.getProdutoCartesiano().keySet() + "  Quant. elementos: " + conjuntos.getProdutoCartesiano().size()+ "\n" + 
-				"Diferença Simétrica = " + conjuntos.getDiferencaSimetrica().keySet() + "  Quant. elementos: " + conjuntos.getDiferencaSimetrica().size() + "\n" + 
-				"Diferença A - B = " + conjuntos.getDiferenca().keySet() + "  Quant. elementos: " + conjuntos.getDiferenca().size() + "\n" + 
-				"Complementar = " + conjuntos.getComplementar().keySet() + "  Quant. elementos: " + conjuntos.getComplementar().size()
+				"União = " + conjuntos.getUniao() + "  Quant. elementos: " + conjuntos.getUniao().size() + "\n" + 
+				"Intersecção = " + conjuntos.getInterseccao() + "  Quant. elementos: " + conjuntos.getInterseccao().size() + "\n" + 
+				"Produto Cartesiano = " + conjuntos.getProdutoCartesiano() + "  Quant. elementos: " + conjuntos.getProdutoCartesiano().size()+ "\n" + 
+				"Diferença Simétrica = " + conjuntos.getDiferencaSimetrica() + "  Quant. elementos: " + conjuntos.getDiferencaSimetrica().size() + "\n" + 
+				"Diferença A - B = " + conjuntos.getDiferenca() + "  Quant. elementos: " + conjuntos.getDiferenca().size() + "\n" + 
+				"Complementar = " + conjuntos.getComplementar() + "  Quant. elementos: " + conjuntos.getComplementar().size()
 		);
 				
 	}
