@@ -51,7 +51,7 @@ public class Aplicacao {
 	     JPanel panel = new JPanel(); 
 	     panel.add(scrollpane);
 	     scrollpane.getViewport().add(list);
-	      JOptionPane.showMessageDialog(null, scrollpane, "Error List",  
+	      JOptionPane.showMessageDialog(null, scrollpane, "Resultado das operações",  
 	                                              JOptionPane.PLAIN_MESSAGE);
 				
 	}
