@@ -49,9 +49,11 @@ public class Conjuntos {
 
 		for (int i = 0; i < tamanho; i++) {
 			if (tipo == 1) {
-				conjuntoA.add(elemento[i]);
+				if(!elemento[i].isEmpty())
+					conjuntoA.add(elemento[i]);
 			} else {
-				conjuntoB.add(elemento[i]);
+				if(!elemento[i].isEmpty())
+					conjuntoB.add(elemento[i]);
 			}
 		}
 	}

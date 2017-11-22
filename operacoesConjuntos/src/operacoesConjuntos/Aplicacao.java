@@ -34,7 +34,7 @@ public class Aplicacao {
 				"Produto Cartesiano = " + conjuntos.getProdutoCartesiano() + "  Quant. elementos: " + conjuntos.getProdutoCartesiano().size()+ "\n" + 
 				"Diferença Simétrica = " + conjuntos.getDiferencaSimetrica() + "  Quant. elementos: " + conjuntos.getDiferencaSimetrica().size() + "\n" + 
 				"Diferença A - B = " + conjuntos.getDiferenca() + "  Quant. elementos: " + conjuntos.getDiferenca().size() + "\n" + 
-				"Complementar = " + conjuntos.getComplementar() + "  Quant. elementos: " + conjuntos.getComplementar().size() + "\n" + 
+				"Complementar A = " + conjuntos.getComplementar() + "  Quant. elementos: " + conjuntos.getComplementar().size() + "\n" + 
 				"Partes = " + conjuntos.getPartes() + "  Quant. elementos: " + conjuntos.getPartes().size()
 		);
 				
