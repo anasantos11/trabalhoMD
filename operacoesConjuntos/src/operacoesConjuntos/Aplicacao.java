@@ -29,13 +29,13 @@ public class Aplicacao {
 				"Conjunto A = " + conjuntos.getConjuntoA() + "\n" + 
 				"Conjunto B = "	+ conjuntos.getConjuntoB() + "\n \n" + 
 				"Quantidade de elementos de acordo com as operações:" + "\n \n" + 
-				"União = " + conjuntos.getUniao() + "  Quant. elementos: " + conjuntos.getUniao().size() + "\n" + 
-				"Intersecção = " + conjuntos.getInterseccao() + "  Quant. elementos: " + conjuntos.getInterseccao().size() + "\n" + 
-				"Produto Cartesiano = " + conjuntos.getProdutoCartesiano() + "  Quant. elementos: " + conjuntos.getProdutoCartesiano().size()+ "\n" + 
-				"Diferença Simétrica = " + conjuntos.getDiferencaSimetrica() + "  Quant. elementos: " + conjuntos.getDiferencaSimetrica().size() + "\n" + 
+				"União A U B = " + conjuntos.getUniao() + "  Quant. elementos: " + conjuntos.getUniao().size() + "\n" + 
+				"Intersecção A ^ B = " + conjuntos.getInterseccao() + "  Quant. elementos: " + conjuntos.getInterseccao().size() + "\n" + 
+				"Produto Cartesiano A x B = " + conjuntos.getProdutoCartesiano() + "  Quant. elementos: " + conjuntos.getProdutoCartesiano().size()+ "\n" + 
+				"Diferença Simétrica (A U B) - (A ^ B) = " + conjuntos.getDiferencaSimetrica() + "  Quant. elementos: " + conjuntos.getDiferencaSimetrica().size() + "\n" + 
 				"Diferença A - B = " + conjuntos.getDiferenca() + "  Quant. elementos: " + conjuntos.getDiferenca().size() + "\n" + 
-				"Complementar A = " + conjuntos.getComplementar() + "  Quant. elementos: " + conjuntos.getComplementar().size() + "\n" + 
-				"Partes = " + conjuntos.getPartes() + "  Quant. elementos: " + conjuntos.getPartes().size()
+				"Complementar Universo - A = " + conjuntos.getComplementar() + "  Quant. elementos: " + conjuntos.getComplementar().size() + "\n" + 
+				"Conjunto das Partes A = " + conjuntos.getPartes() + "  Quant. elementos: " + conjuntos.getPartes().size()
 		);
 				
 	}
